@@ -1,8 +1,9 @@
+<<<<<<< HEAD
 <!-- CI badge: replace OWNER and REPO with your GitHub values -->
 
 [![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/ci.yml)
 
-Jeezbot  Full-stack TypeScript chatbot monorepo
+Jeezbot — Full-stack TypeScript chatbot monorepo
 
 Quick start (Windows PowerShell):
 
@@ -40,8 +41,12 @@ This repository includes a Husky pre-commit hook that runs the workspace linter 
 ```powershell
 npm install
 npx husky install
-```
+``` 
 
 The project already defines a `prepare` script (`npm run prepare`) which calls `husky install` when run as part of an `npm install`. The pre-commit hook will run `npm run lint` and abort the commit if linting fails. To skip hooks for a single commit you can use `git commit --no-verify`.
 
 License: MIT
+=======
+# jeezbot
+Bot for Jeez discord
+>>>>>>> origin/main
