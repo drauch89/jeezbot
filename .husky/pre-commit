@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run workspace lint before commit
+npm run lint || {
+  echo "Lint failed — aborting commit"
+  exit 1
+}

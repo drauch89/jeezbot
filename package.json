@@ -1,0 +1,22 @@
+{
+  "name": "jeezbot",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:dev": "concurrently \"npm run dev --prefix packages/backend\" \"npm run dev --prefix packages/frontend\"",
+    "build": "npm run build --prefix packages/backend && npm run build --prefix packages/frontend",
+    "test": "npm test --prefix packages/backend",
+    "lint": "npm run lint --prefix packages/backend",
+    "ci": "npm run lint && npm test --prefix packages/backend && npm run build",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "eslint": "^8.44.0",
+    "prettier": "^2.8.8",
+    "husky": "^8.0.0"
+  }
+}
